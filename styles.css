@@ -6,69 +6,52 @@ body {
     color: #000;
 }
 
-/* Navbar Layout */
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 30px;
-  background-color: #000;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #fff;
+    color: #000;
 }
 
-.logo img {
-  height: 40px;
+.logo {
+    height: 40px;
 }
 
-/* Main Menu */
 .menu {
-  list-style: none;
-  display: flex;
-  gap: 30px;
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
 .menu li {
-  position: relative;
+    position: relative;
+    cursor: pointer;
 }
 
-.menu > li > a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 8px 12px;
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    color: #000;
+    min-width: 160px;
+    z-index: 1;
+    padding: 10px 0;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
-/* Dropdown */
-.dropdown {
-  display: none;
-  position: absolute;
-  top: 100%;
-  background: #111;
-  min-width: 160px;
-  z-index: 1;
-  border: 1px solid #444;
+.dropdown-content li, .dropdown-content button {
+    padding: 8px 16px;
+    text-align: left;
+    border: none;
+    background: none;
+    width: 100%;
 }
 
-.dropdown li a {
-  color: #fff;
-  padding: 10px 15px;
-  display: block;
-  text-decoration: none;
+.dropdown:hover .dropdown-content {
+    display: block;
 }
-
-.menu li:hover .dropdown {
-  display: block;
-}
-
-/* Prevent purple color on visited links */
-a:visited {
-  color: #fff;
-}
-
-/* Optional: Keep hover consistent */
-a:hover {
-  color: #ccc;
-}
-
 
 .btn, .cta {
     background: #fff;
